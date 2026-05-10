@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram con Bootstrap</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-light bg-white border-bottom">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fa-brands fa-instagram"></i>
+                Instagram
+            </a>
+
+            <div class="d-flex">
+                <button
+                    class="btn btn-success me-2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalPost"
+                >
+                    Crear nuevo post
+                </button>
+
+                <div class="dropdown">
+                    <button
+                        class="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                    >
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                        <li><a class="dropdown-item" href="#">Accesibilidad</a></li>
+                        <li><a class="dropdown-item" href="#">Privacidad</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div
+        class="modal fade"
+        id="modalPost"
+        tabindex="-1"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Crear nuevo post</h5>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                    ></button>
+                </div>
+
+                <div class="modal-body">
+                    <p class="mb-1">Descripción:</p>
+
+                    <textarea
+                        class="form-control mb-3"
+                        rows="3"
+                        placeholder="Escribe algo para tu post"
+                    ></textarea>
+
+                    <button class="btn btn-light border">
+                        <i class="fa-solid fa-camera"></i>
+                    </button>
+
+                    <button class="btn btn-light border">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </button>
+                </div>
+
+                <div class="modal-footer">
+                    <button
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                    >
+                        Cerrar
+                    </button>
+
+                    <button class="btn btn-success">
+                        Publicar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center mt-3">
+        <ul class="nav nav-tabs justify-content-center border-0">
+            <li class="nav-item">
+                <button
+                    class="nav-link active"
+                    data-bs-toggle="tab"
+                    data-bs-target="#vistaGrid"
+                    type="button"
+                >
+                    <i class="fa-solid fa-table-cells"></i>
+                </button>
+            </li>
+
+            <li class="nav-item">
+                <button
+                    class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#vistaPost"
+                    type="button"
+                >
+                    <i class="fa-solid fa-square"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tab-content">
+
+        <div class="tab-pane fade show active" id="vistaGrid">
+            <div class="container mt-3">
+                <div class="row g-3">
+                    <div class="col-4">
+                        <img class="img-fluid w-100" src="https://picsum.photos/id/1015/600/600" alt="foto">
+                    </div>
+
+                    <div class="col-4">
+                        <img class="img-fluid w-100" src="https://picsum.photos/id/1025/600/600" alt="foto">
+                    </div>
+
+                    <div class="col-4">
+                        <img class="img-fluid w-100" src="https://picsum.photos/id/1035/600/600" alt="foto">
+                    </div>
+
+                    <div class="col-4">
+                        <img class="img-fluid w-100" src="https://picsum.photos/id/1043/600/600" alt="foto">
+                    </div>
+
+                    <div class="col-4">
+                        <img class="img-fluid w-100" src="https://picsum.photos/id/1050/600/600" alt="foto">
+                    </div>
+
+                    <div class="col-4">
+                        <img class="img-fluid w-100" src="https://picsum.photos/id/1062/600/600" alt="foto">
+                    </div>
+
+                    <div class="col-4">
+                        <img class="img-fluid w-100" src="https://picsum.photos/id/1074/600/600" alt="foto">
+                    </div>
+
+                    <div class="col-4">
+                        <img class="img-fluid w-100" src="https://picsum.photos/id/1084/600/600" alt="foto">
+                    </div>
+
+                    <div class="col-4">
+                        <img class="img-fluid w-100" src="https://picsum.photos/id/109/600/600" alt="foto">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="vistaPost">
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-6 mx-auto">
+
+                        <div class="card mb-4">
+                            <div class="card-header d-flex justify-content-between">
+                                <strong>Mi primera foto</strong>
+                                <span>1/3</span>
+                            </div>
+
+                            <img
+                                src="https://picsum.photos/id/1015/600/600"
+                                class="card-img-top"
+                                alt="foto"
+                            >
+
+                            <div class="card-body">
+                                <p><strong>23 Me gusta</strong></p>
+                                <p>
+                                    Esta es una foto de prueba para practicar el diseño de Instagram con Bootstrap.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-header d-flex justify-content-between">
+                                <strong>Un perrito</strong>
+                                <span>2/3</span>
+                            </div>
+
+                            <img
+                                src="https://picsum.photos/id/1025/600/600"
+                                class="card-img-top"
+                                alt="foto"
+                            >
+
+                            <div class="card-body">
+                                <p><strong>45 Me gusta</strong></p>
+                                <p>
+                                    Bootstrap ayuda bastante para crear columnas, botones, tarjetas y menús.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-header d-flex justify-content-between">
+                                <strong>Paisaje bonito</strong>
+                                <span>3/3</span>
+                            </div>
+
+                            <img
+                                src="https://picsum.photos/id/1035/600/600"
+                                class="card-img-top"
+                                alt="foto"
+                            >
+
+                            <div class="card-body">
+                                <p><strong>87 Me gusta</strong></p>
+                                <p>
+                                    Aquí se puede ver la vista de una imagen por fila, como en un feed normal.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+    ></script>
+
+</body>
+</html>
